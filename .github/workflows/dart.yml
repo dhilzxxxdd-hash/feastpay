@@ -11,10 +11,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    defaults:
-      run:
-        working-directory: ./feastpay_app
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -41,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: app-release
-          path: feastpay_app/build/app/outputs/flutter-apk/app-release.apk
+          path: build/app/outputs/flutter-apk/app-release.apk
